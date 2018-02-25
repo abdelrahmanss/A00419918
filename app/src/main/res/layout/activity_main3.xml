@@ -9,28 +9,52 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="ExtraText">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="height between 0.5 to 2.5 metre" />
 
             <EditText
                 android:id="@+id/editText6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="height" />
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="weight between 10 to 250 KG" />
 
             <EditText
                 android:id="@+id/editText7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="weight" />
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/daterecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Date of Record"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Body Mass Index is" />
 
             <EditText
                 android:id="@+id/editText8"
@@ -44,8 +68,36 @@
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="saveResult"
+                android:onClick="calcResult"
                 android:text="calculate" />
+
+
+            <Button
+                android:id="@+id/AddRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add records" />
+
+            <Button
+                android:id="@+id/showrecords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Show Records" />
+
+            <Button
+                android:id="@+id/clearbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="clearallrecords"
+                android:text="Clear all records" />
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:onClick="onClickEventlogout"
+                android:text="LOG OUT" />
+
         </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
