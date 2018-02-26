@@ -22,7 +22,7 @@ public class Updatepass extends AppCompatActivity {
     BMICALCDATABASE mydb;
     Button showuserrecord;
     Button updateuserpass;
-    EditText userid_txt,name_txt,pass_txt;
+    EditText userid_txt,pass_txt;
 
 
     @Override
@@ -35,7 +35,6 @@ public class Updatepass extends AppCompatActivity {
         updateuserpass = (Button) findViewById(R.id.button3) ;
 
         userid_txt = (EditText) findViewById(R.id.editText2);
-        name_txt = (EditText) findViewById(R.id.name);
         pass_txt = (EditText) findViewById(R.id.pass);
         viewAll();
         UpdateData();

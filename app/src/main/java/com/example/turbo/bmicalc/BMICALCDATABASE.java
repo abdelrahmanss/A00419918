@@ -25,6 +25,7 @@ public class BMICALCDATABASE extends SQLiteOpenHelper {
     public static final String UserID = "uid";
 
 
+
     public static final String UID = "uid";
 
 
@@ -86,6 +87,16 @@ public class BMICALCDATABASE extends SQLiteOpenHelper {
             return true;
     }
 
+    public boolean updateData(String id,String pass) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        //contentValues.put(UserID,id);
+        contentValues.put(Pass,pass);
+        String strf = "_uid= " + id;
+        db.update(TABLE_NAME, contentValues, strf,null);
+        return true;
+    }
+
 public Cursor getalldata() {
     SQLiteDatabase db = this.getWritableDatabase();
     Cursor res = db.rawQuery("select * FROM "+TABLE_NAME2,null);
@@ -119,12 +130,5 @@ return res3;
 
 
 
-    public boolean updateData(String id,String pass) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(UserID,id);
-        contentValues.put(Pass,pass);
-        db.update(TABLE_NAME, contentValues, "uid = ?",new String[] {id});
-        return true;
-    }
+
 }
